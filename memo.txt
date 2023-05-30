@@ -1,0 +1,27 @@
+랜딩 페이지 만들어주는 a태그
+
+여기서 깨달은거 있음
+페이지마다 position 정의 해줄때 작동 안된 이유는
+head를 index.html로 먼저 우선순위로 만들면서
+이러한 랜더링 메인 첫페이지가 shard.css로 작업을 하였는데
+ 프로그램은 순서대로 읽기에
+
+ <link rel="stylesheet" href="places.css">    
+ <link rel="stylesheet" href="shared.css">
+
+ 이렇게 순위를 두면 static이 먹히지 않는다
+ static다음에 absolute가 실행되니깐 움직이지 않은것
+
+   <link rel="stylesheet" href="shared.css">    
+   <link rel="stylesheet" href="places.css">
+
+   우선순위를 잘되야지 작동된다.
+
+boder-radius의 값에서 이미지가 그대로 각져있을 때 쓸 수있는
+overflow속성
+
+   overflow : visible; 기본값
+   overflow : hiden; 맞춤값
+
+object-fit속성으로
+어색한 이미지를 바로 잡을 수있다.
